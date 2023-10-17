@@ -1,10 +1,26 @@
 package org.AnarchyFoxy;
 
+
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.util.Scanner;
 
 public class MouseMovementSimulator {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean runAgain;
+
+        do {
+            runSimulation();
+            System.out.print("Czy chcesz uruchomić symulację ponownie? (T/N): ");
+            String response = scanner.nextLine().trim().toLowerCase();
+            runAgain = response.equals("t");
+        } while (runAgain);
+
+        System.out.println("Dziękujemy za skorzystanie z symulatora.");
+    }
+
+    public static void runSimulation() {
         try {
             // Utwórz obiekt Robot
             Robot robot = new Robot();
