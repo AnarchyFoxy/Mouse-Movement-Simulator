@@ -17,7 +17,8 @@ public class MouseMovementSimulator {
             runAgain = response.equals("t");
         } while (runAgain);
 
-        System.out.println("Dziękujemy za skorzystanie z symulatora.");
+        System.out.println("Mam nadzieję, że symulator był przydatny.");
+        System.out.printf("\nTo rzekła Anarchy Foxy");
     }
 
     public static void runSimulation() {
